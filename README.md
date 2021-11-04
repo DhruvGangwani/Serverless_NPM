@@ -24,50 +24,49 @@
 	--serverless.yml: Config needed by Serverless NPM
 	
 	
-###Configure AWS:
+### Configure AWS:
 Use command "aws configure" and enter details such as :
 1. AWS Access Key ID
 2. AWS Secret Access Key
 3. Region
 
-###Serverless NPM: 
+### Serverless NPM: 
 To deploy function to AWS Lambda 
-###Install : 
-'''bash
 
+### Install : 
+```bash
 npm install -g serverless
-
-'''
+```
 
 Step 1: "serverless" command to create repository depending on the choice of app. For this app, we chosed python starter package.
 
-'''bash
+```bash
 serverless
-'''
+```
 
 Step 2: To add requirements.txt to package, add plugin using command 
 
-'''bash
+```bash
 sls plugin install -n serverless-python-requirements
-'''
+```
 
 Step 3: To Deploy
 
-'''bash
+```bash
 serverless deploy function -f salary_extraction
-'''
+```
 
 Step 4: To Invoke
 
-'''bash
+```bash
 serverless invoke -f salary_extraction -l
-'''
+```
 
 Step 5: To Invoke locally
 
-'''bash
+```bash
 serverless invoke local -f salary_extraction -l
-'''
+```
 
 
 
