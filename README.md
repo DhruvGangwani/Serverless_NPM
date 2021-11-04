@@ -59,7 +59,7 @@ serverless deploy function -f salary_extraction
 Step 4: To Invoke
 
 ```bash
-serverless invoke -f salary_extraction -l
+serverless invoke -f salary_extraction -l --data '{"text": "i earn 44 k a month"}'
 ```
 
 Step 5: To Invoke locally
@@ -68,6 +68,9 @@ Step 5: To Invoke locally
 serverless invoke local -f salary_extraction -l
 ```
 
-
+### Note
+The results of salary extraction includes:
+1. Salary 
+2. Period such as month, yearly, per year, per annum 
 
 
