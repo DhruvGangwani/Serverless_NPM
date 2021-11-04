@@ -1,0 +1,16 @@
+service: ner-salary
+
+frameworkVersion: '2'
+
+
+provider:
+  name: aws
+  runtime: python3.7
+  lambdaHashingVersion: 20201221
+
+functions:
+  salary_extraction:
+    handler: handler.salary_extraction
+
+plugins:
+  - serverless-python-requirements
